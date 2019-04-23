@@ -10,7 +10,8 @@
         android:id="@+id/linear_mountain_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,30 +19,27 @@
 
         <TextView
             android:id="@+id/mountainNameTW"
-            android:textSize="32dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:text="@string/textview" />
+            android:text="@string/textview"
+            android:textSize="32dp" />
 
         <TextView
             android:id="@+id/mountainLocationTW"
-            android:textSize="22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:text="@string/textview" />
+            android:text="@string/textview"
+            android:textSize="22dp" />
 
         <TextView
             android:id="@+id/mountainHeightTW"
-            android:textSize="22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:text="@string/textview" />
+            android:text="@string/textview"
+            android:textSize="22dp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
