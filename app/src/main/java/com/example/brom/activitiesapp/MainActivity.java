@@ -1,5 +1,7 @@
 package com.example.brom.activitiesapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("EMIL", mountainNames[position]);
+
+                Intent intent = new Intent(MainActivity.this, MountainDetailsActivity.class);
+                intent.putExtra("MOUNTAIN_STRING_DATA", new String[] {mountainNames[position], mountainLocations[position]});
+                intent.putExtra("MOUNTAIN_INT_DATA", mountainHeights[position]);
+                // String message = mMessageEditText.getText().toString();
+                // intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+
             }
         });
 
