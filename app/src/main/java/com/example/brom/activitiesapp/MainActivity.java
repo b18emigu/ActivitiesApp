@@ -1,18 +1,38 @@
 package com.example.brom.activitiesapp;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
-    private String[] mountainLocations = {"Alps","Alps","Alaska"};
-    private int[] mountainHeights ={4478,4808,6190};
+    private String[] mountainNames = { "Matterhorn", "Mont Blanc", "Denali" };
+    private String[] mountainLocations = { "Alps", "Alps", "Alaska" };
+    private int[] mountainHeights = { 4478, 4808, 6190 };
+
     // Create ArrayLists from the raw data above and use these lists when populating your ListView.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        List<String> arrayList = new ArrayList<>(Arrays.asList(mountainNames));
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.mountain_detailsactivity, R.id.mountain_layout_listview, arrayList);
+        ListView lw = (ListView) findViewById(R.id.mountain_listview);
+        lw.setAdapter(arrayAdapter);
+
+
 
         // 1. Create a ListView as in previous assignment
         // 2. Create a new activity named "MountainDetailsActivity
